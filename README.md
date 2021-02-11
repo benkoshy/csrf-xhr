@@ -16,6 +16,27 @@ contents of the `<meta name="csrf-token">` that [Rails generates in the page's
 [jQuery-ujs](https://github.com/rails/jquery-ujs) does this for you;
 this does it for you even if you aren't using jQuery.
 
+## Webpack Instructions
+
+1. Install
+
+`yarn add csrf-xhr`
+
+2. Import:
+```js
+// application.js 
+import("csrf-xhr")
+```
+
+3. Ensure Correct Order in Layout file:
+
+```erb
+<-- e.g. app/views/layouts/application.html.erb -->
+
+<meta name="csrf-token">
+<%= javascript_pack_tag "application" %>  <-- Must come AFTER the above csrf meta tag -->
+```
+
 ## Motivation
 
 This was created to decouple [`elm-rails`](https://github.com/NoRedInk/elm-rails/)

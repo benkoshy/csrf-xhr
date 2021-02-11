@@ -16,7 +16,7 @@ contents of the `<meta name="csrf-token">` that [Rails generates in the page's
 [jQuery-ujs](https://github.com/rails/jquery-ujs) does this for you;
 this does it for you even if you aren't using jQuery.
 
-## Webpack Instructions
+## Webpacker Instructions
 
 1. Install
 
@@ -29,7 +29,6 @@ import("csrf-xhr")
 ```
 
 3. Ensure Correct Order in Layout file:
-
 ```erb
 <-- e.g. app/views/layouts/application.html.erb -->
 
